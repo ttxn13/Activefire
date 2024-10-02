@@ -35,3 +35,11 @@ The testing phase is divided in two main steps. The first one is to pass the `im
 ```shell
 python inference.py
 ```
+## Evaluate
+If your samples are placed in a diretory other than the default you need to change the constant `IMAGES_PATH` and `MASKS_PATH`. The outputs produced by the CNN are converted to interger through a thresholding process, the default threshold is 0.25. You can change this value in the `TH_FIRE` constant.
+
+After this processes you can start the second step to evaluate your trained model, running:
+```shell
+python evaluate.py
+```
+This will show the results from your model.
