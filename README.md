@@ -2,7 +2,8 @@
 ## Abstract
 222
 ## Requirements
-111
+Python 3.11.8
+PyTorch = 2.4.1+cu121
 ## Download
 Start by downloading the full dataset from Google Cloud Drive. If you don't have that much storage space, you can download the sample dataset and set the `DOWNLOAD_FULL_DATASET` to `False` before running it.
 ```shell
