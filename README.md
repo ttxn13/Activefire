@@ -1,6 +1,6 @@
 # Active Fire Detection in Landsat-8 Imagery
 ## Abstract
-222
+Based on a large satellite image dataset of patches obtained by directly cutting the original image and converted binary image masks. Then, three existing automatic segmentation algorithms (Kumar and Roy (2018), Murphy et al. (2016), and Schroeder et al. (2016)) were used to label masks in 140,000 datasets and generate fire point labeling. These data sets are divided into training sets, testing sets and verification sets according to 40%, 50% and 10%. Then the intersection algorithm is used to eliminate the noise as much as possible. Finally, the scores of P, R, IoU and F were obtained to reflect the training effect of the model.
 ## Requirements
 Python 3.11.8
 
