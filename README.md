@@ -23,7 +23,7 @@ python split.py
 ```
 This will create the `images_masks.csv`, the `images_*.csv` and the `masks_*.csv` files. By default the data will be divided in a proportion of 40% for training, 50% for testing and 10% for validation. If you want to change these proportions you need to change the `TRAIN_RATIO`, `TEST_RATIO` and `VALIDATION_RATIO` constants.
 ## Train
-If you want to use pre-trained weights, just change the `WEIGHTS_FILE` path in `inference.py` to skip this section.
+The pre-trained weights are given in the folder along with the code and can be directly referenced. If you want to use pre-trained weights, just change the `WEIGHTS_FILE` path in `inference.py` to skip this section.
 
 If you wish to train a model from scratch you need to run:
 ```shell
