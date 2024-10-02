@@ -4,7 +4,7 @@
 ## Requirements
 111
 ## Download
-Start by downloading the full dataset from Google Cloud Drive. If you don't have that much storage space, you can download the sample dataset and set the DOWNLOAD_FULL_DATASET to False before running it.
+Start by downloading the full dataset from Google Cloud Drive. If you don't have that much storage space, you can download the sample dataset and set the `DOWNLOAD_FULL_DATASET` to `False` before running it.
 ```shell
 python download.py
 ```
@@ -15,7 +15,7 @@ python unzip.py
 ```
 Similarly, if you downloaded the sample dataset in the first step, set the `DOWNLOAD_FULL_DATASET` to `False` before running it.
 ## Split
-If you decide to train the networks from scratch you will need to separete the samples in three subsets. The samples used for training, test and validation are defined by CSV files inside the <model path>/dataset folder. The images_masks.csv file list all the images and corresponding masks for the approach. The images_train.csv and masks_train.csv files list the files used to train the model, the *_val.csv files hold the files for the validation and the *_test.csv files have the files used in the test phase. For this purpose you can run:
+If you decide to train the networks from scratch you will need to separete the samples in three subsets. The samples used for training, test and validation are defined by CSV files inside the `<model path>/dataset` folder. The images_masks.csv file list all the images and corresponding masks for the approach. The `images_train.csv` and `masks_train.csv` files list the files used to train the model, the `*_val.csv` files hold the files for the validation and the `*_test.csv` files have the files used in the test phase. For this purpose you can run:
 ```shell
 python split.py
 ```
