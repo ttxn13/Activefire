@@ -18,3 +18,15 @@ If you decide to train the networks from scratch you will need to separete the s
 python split.py
 ```
 This will create the images_masks.csv, theimages_*.csv and the masks_*.csv files. By default the data will be divided in a proportion of 40% for training, 50% for testing and 10% for validation. If you want to change these proportions you need to change the TRAIN_RATIO, TEST_RATIO and VALIDATION_RATIO constants.
+## Train
+If you want to use pre-trained weights, just change the `WEIGHTS_FILE` path in `inference.py` to skip this section.
+
+If you wish to train a model from scratch you need to run:
+```shell
+python  train.py
+```
+This will execute all the steps needed to train a new model. This code expects that the samples are in a sibling folder of src named dataset, the images must be in `dataset/images/patches` and the masks in `dataset/masks/patches` and `dataset/masks/intersection` for intersection masks. If you are using other directory to hold your samples you may change the `IMAGES_PATH` and `MASKS_PATH` constants.
+
+The output produced by the training script will be placed at the train_output folder inside the model folder. This repository already includes trained weights inside this folder, so if you retrain the model these weights will be overwritten.
+
+Besides the final weights, this script will save checkpoints every 5 epochs, if you need to resume from a checkpoint you just need to set the constant `INITIAL_EPOCH` with the epoch corresponding to the checkpoint.
