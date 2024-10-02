@@ -23,10 +23,15 @@ If you want to use pre-trained weights, just change the `WEIGHTS_FILE` path in `
 
 If you wish to train a model from scratch you need to run:
 ```shell
-python  train.py
+python train.py
 ```
 This will execute all the steps needed to train a new model. This code expects that the samples are in a sibling folder of src named dataset, the images must be in `dataset/images/patches` and the masks in `dataset/masks/patches` and `dataset/masks/intersection` for intersection masks. If you are using other directory to hold your samples you may change the `IMAGES_PATH` and `MASKS_PATH` constants.
 
 The output produced by the training script will be placed at the train_output folder inside the model folder. This repository already includes trained weights inside this folder, so if you retrain the model these weights will be overwritten.
 
 Besides the final weights, this script will save checkpoints every 5 epochs, if you need to resume from a checkpoint you just need to set the constant `INITIAL_EPOCH` with the epoch corresponding to the checkpoint.
+## Inference
+The testing phase is divided in two main steps. The first one is to pass the `images_test.csv` images through the trained model and save the output as a txt file, where 0 represents background and 1 represents fire. The masks in `masks_test.csv` will also be converted to a txt file. These files will be written in the log folder inside the model folder. The output prediction produced by the CNN will be saved as `det_<image-name>.txt` while the corresponding mask will be saved as `grd_<mask-name>.txt.` To execute this process run:
+```shell
+python inference.py
+```
